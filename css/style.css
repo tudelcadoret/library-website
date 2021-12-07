@@ -1,0 +1,461 @@
+/******************************************************************************/
+/* TYPOGRAPHIES */
+@import url('https://fonts.googleapis.com/css2?family=Farro&family=IBM+Plex+Mono&family=Open+Sans&display=swap');
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+    line-height: 1.8;    
+    font-size: 1.6rem;
+}
+
+h1, h2 {
+	font-family: 'Farro', sans-serif;
+}
+
+h1 {
+  	font-size: 3rem;
+}
+
+h2 {
+  	font-size: 2rem;
+}
+
+/******************************************************************************/
+/* GENERAL */
+* {
+	box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: #666;
+	background: rgb(255,255,255);
+	background: -moz-linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(158,180,191,1) 100%);
+	background: -webkit-linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(158,180,191,1) 100%);
+	background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(158,180,191,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#9eb4bf",GradientType=1);
+    text-align: center;
+    min-width: 450px;    
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 50%;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.errorMessage, .validMessage {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.errorMessage {
+    color: red;
+}
+
+.validMessage {
+    color: green;
+}
+
+.historyBack {
+    margin-top: 15px;
+    padding: 7px;
+    border-radius:25%;
+    color: blue;
+    background-color: white;
+}
+
+.historyBack:hover {
+    color: white;
+    background-color: blue;
+}
+
+
+/****************************************************************************/
+/* HEADER */
+header .isSelected {
+    font-family: 'Dancing Script', cursive;
+    background-color: #fff;
+    color: #00253F;
+    font-weight: bold;
+}
+
+header div {
+    background-color: #D4E2DF;
+    border-radius: 35% 35% 0% 0%;
+}
+
+header img {
+    width: 100%;
+    height: 100%;
+}
+
+header nav {
+    background-color: #00253F;
+}
+
+header nav a {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    padding: 10px 0px;
+}
+
+header nav a:hover {
+    color: red;
+}
+
+/******************************************************************************/
+/* MAIN */
+
+/**************************************/
+/* .FORM */
+main .form {
+	margin: 0 auto;
+	padding: 15px;
+	border: 2px #666 solid;
+	border-radius: 10px;
+}
+
+main .form label {
+    font-weight: bold;
+}
+
+main .form input, main .form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    resize: none;
+}
+
+
+main .form input:focus {
+    background-color: #FF606F;
+}
+
+main .form button {
+	width: 50%;
+	min-width: 90px;
+	margin: 0 auto;
+	padding: 5px 0px;
+	background-color: #EE7203;
+	color: white;
+	border: 1px solid #666;
+	border-radius: 10px;
+	font-weight: bold;
+}
+
+main .form button:hover {
+	background-color: white;
+	color: #EE7203;
+}
+
+main .form img, main .allBooks img, main .bookDetails img {
+    width: 100px;
+    height:200px;
+    border-radius: 10px;
+}
+
+
+/* OTHERS********************/
+main h1 {
+    color: #FF606F;
+	padding-top: 15px;
+}
+
+main h2 {
+    color: #a01881;
+}
+
+main section {
+	background-color: #FFFFFF;
+	margin: 0 auto;
+	padding: 20px 10px;
+}
+
+main article {
+    margin: 6% 0;
+}
+
+main article img {
+    border: 3px #FFFFFF solid;
+}
+
+main article img:hover {
+    border: 3px #a01881 solid;
+    transition-duration: 0.4s;
+    transition-property: border;
+}
+
+/**************************************/
+/* HOME PAGE */
+.home h1 {
+    margin-bottom: 10%;
+}
+
+.home .banner {
+    display: none;
+	width: 115%;
+	position: relative;
+	left: -7.5%;
+	border-radius: 5px;
+}
+
+.home article img {
+    width: 75%;
+    height: 75%;
+    border-radius: 0 15%;
+}
+
+.home article p {
+    text-align: justify;
+}
+
+/**************************************/
+/* ALL BOOKS PAGE */
+.allBooks div {
+    align-items: center;
+    flex-wrap: wrap;    
+}
+
+
+/**************************************/
+/* CONTACTS PAGE */
+.contact address {
+	font-style: normal;
+}
+
+.contact address a {
+	color: #666;
+}
+
+.contact p {
+	font-weight: bold;
+}
+
+.contact i {
+    font-size: 7rem;
+    display: block;
+}
+
+.contact i:hover {
+    color: #00253F;
+}
+    
+.contact iframe {
+    display: none;
+    width: 100%;
+    height: 80%;
+    border: 1% #00253F solid;
+    border-radius: 5%;
+	box-shadow: 10px 5px 5px #666;
+}
+
+
+/**************************************/
+/* USERSPACE PAGE */
+
+.userspace table {
+    border-collapse: collapse;
+    border: 1px #666 solid;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.userspace th, .userspace td {
+    padding: 2%;
+}
+
+.userspace i {
+    font-size: 4rem;
+    color: #FF606F;
+}
+
+.userspace i:hover {
+    color: #666;
+}
+
+.userspace .modal {
+    display: none;
+    background-color: rgba(0,0,0,0.4);
+    border: 2px black solid;
+    border-radius: 10px;
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.userspace .modalContent {
+    margin: 15% auto;
+    padding: 20px;
+    text-transform: uppercase;
+    background-color: #fefefe;
+    border: 1px solid #888;
+    width: 30%;
+}
+
+.userspace .styleChoice:hover {
+    color: #FF606F;
+    font-weight: bold;
+}
+
+
+/**************************************/
+/* REGISTER/LOGIN PAGES */
+.register .form, .login .form {
+	display: flex;
+	flex-direction: column;
+}
+
+.register .form input, .login .form input {
+	margin-bottom: 5%;
+	border-radius: 5%;
+}
+
+
+/**************************************/
+/* ADMIN PAGE */
+.admin .adminArticle {
+    margin: 20px 0px;
+    padding: 5px 0px 15px 0px;
+    background-color: #D4E2DF;
+    border-radius: 15px;
+}
+
+.admin .hiddenBlock {
+    display: none;
+}
+
+.admin .fadeIn {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.7s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.admin i{
+    font-size: 15rem;
+}
+
+.admin i:hover {
+    cursor: pointer;
+    color: #EE7203;
+}
+
+/* BOOK DETAILS */
+.admin .deleteBook i {
+    color: red;
+}
+
+/* ARTICLE SEARCH BAR*/
+.admin .liSearchBar {
+    background-color: white;
+    margin: 0 auto;
+    width: 80%;
+}
+
+/******************************************************************************/
+/* FOOTER */
+footer {
+    padding: 10px 0px;
+    background-color: #D4E2DF;
+}
+
+footer nav i {
+    margin: 2px;
+    padding: 6px;
+    border: 2px #00253F solid;
+    color: #00253F;
+    border-radius: 50%;
+    box-shadow: 0 20px 15px rgba(0,0,0,0.3);
+    background: linear-gradient(0deg, #ddd, #fff);
+}
+
+footer nav i:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    color: #a01881;
+    transition: all 0.3s ease 0s;
+}
+
+
+/******************************************************************************/
+/* MEDIA QUERIES */
+
+/* TABLETTE 700px - 1025px  */
+@media all and (min-width: 700px) {
+    .flex {
+        flex-direction: row;
+    }
+    .form {
+    	width: 60%;
+    }
+    /* header */
+    header img {
+        width: 150px;
+        height: 150px;
+        padding-top: 15px;
+    }
+    header nav a {
+        width: 300px;
+    }
+    /* home */
+    .home .floatLeft {
+        float: left;
+        margin-right: 3%;
+    }
+    
+    .home .floatRight {
+        float: right;
+        margin-left: 3%;
+    }
+    .home article img {
+        width: 30%;
+        height: 30%;
+    }
+}
+
+/* DESKTOP > 1025px  */
+@media all and (min-width: 1025px) {
+    /* home page */
+    .home .banner {
+        display: block;
+    }
+    .contact i {
+        display: none;
+    }
+    .contact iframe {
+        display: block;
+    }
+}

@@ -1,0 +1,84 @@
+<section class="admin container">
+    
+    <h1>A vous le contrôle !</h1>
+    
+    
+    <!--*************************************************************************-->
+    <!-- ADD BOOK FORM -->
+    <article class="adminArticle">
+        
+        <h2>Ajouter un livre</h2>
+        
+        <i class="far fa-plus-square actionDisplay"></i>
+        
+        <div id="articleAddBook" class="hiddenBlock">
+            
+            <div id="return"></div>
+    	
+            <form id="addBook" class="form" method="post" enctype="multipart/form-data">
+                
+                <div>
+                    <label for="title_book">Titre :</label>
+                    <input type="text" id="title_book" name="title_book"/>
+                </div>
+                <div>  
+                    <label for="author_book">Auteur :</label>
+                    <input type="text" id="author_book" name="author_book"/>
+                </div>
+                <div>
+                    <label for="description_book">Description :</label>
+                    <textarea id="description_book" name="description_book" rows="5" cols="33"></textarea>
+                </div>
+                <div>  
+                    <label for="inStock_book">Quantité :</label>
+                    <input type="number" id="inStock_book" name="inStock_book" min="1"/>
+                </div>
+                <div> 
+                    <label for="image_book">Image :</label>
+                    <input type="file" id="image_book" name="image_book"/>
+                    <span>(image au format 300x400)</span>
+                </div>
+                <div>
+                    <span>Coup de coeur ?</span>
+                    <div>
+                        <label for="yes">Oui</label>
+                        <input type="radio" id="yes" name="isFav_book" value="yes">
+                        <label for="no">Non</label>
+                        <input type="radio" id="no" name="isFav_book" value="no" checked>
+                    </div>
+                </div>
+                <button type="submit" class="btnAction">Ajouter nouveau livre</button>
+                
+            </form>
+        </div>
+        
+    </article>
+    
+
+    <!--*************************************************************************-->
+    <!-- SEARCH LIVE BAR -->
+    <article class="adminArticle">
+        
+        <h2>Vous cherchez un livre ?</h2>
+        
+        <i class="fas fa-search actionDisplay"></i>
+        
+        <div id="articleSearchBar" class="hiddenBlock">
+            <div class="form">
+                <h3>Modifier les données d'un livre</h3>
+                <label for="searchBook">Titre du livre</label>
+                <input type="text" id="searchBook" name="searchBook"/>
+                <ul id="returnBook"></ul>
+            </div>
+        </div>
+        
+    </article>
+        
+</section>
+
+
+
+
+
+
+

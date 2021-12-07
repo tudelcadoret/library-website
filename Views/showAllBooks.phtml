@@ -1,0 +1,52 @@
+<section class="allBooks container">
+	
+	<h1>Tous nos livres</h1>
+	
+	<!-- no active session -->
+    <?php if(!array_key_exists('user', $_SESSION)) : ?>
+        <p>Il vaut faudra créer un compte et vous connecter pour regarder le détail des livres.</p>
+    <?php endif ;?>
+    
+    <!--*********************************************************************-->
+    <!-- NEW BOOKS -->
+    <article class="adminArticle">
+        
+        <h2>Nos nouveautés</h2>
+        
+        <div class="flex">
+            <?php foreach($books as $book) : ?>
+            
+                <!-- active session -->
+                <?php if(array_key_exists('user', $_SESSION)) : ?>
+                    <a href="index.php?a=bookDetails&idBook=<?= $book['id_book'] ?>&idUser=<?= $_SESSION['user']['id_user'] ?>">
+                        <img src="img/<?= $book['image_book'] ?>" alt="Image du livre intitulé : <?= $book['title_book'] ?>">
+                    </a>
+                <!-- no active session -->
+                <?php else : ?>
+                    <img src="img/<?= $book['image_book'] ?>" alt="Image du livre intitulé : <?= $book['title_book'] ?>">
+                <?php endif ;?>
+                
+            <?php endforeach ;?>
+        </div>
+        
+    </article>
+    
+    <!--*********************************************************************-->
+    <!-- FAVORITE BOOKS -->
+    <article class="adminArticle">
+        
+        <h2>Nos coups de coeur</h2>
+        
+        <div class="flex">
+            <?php foreach($books as $book) : ?>
+                <?php if($book['isFav_book'] === "yes") : ?>
+                    <img src="img/<?= $book['image_book'] ?>" alt="Image du livre intitulé : <?= $book['title_book'] ?>">
+                <?php endif ;?>
+            <?php endforeach ;?>
+        </div>
+        
+    </article>
+	
+</section>
+	
+

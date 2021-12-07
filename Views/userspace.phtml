@@ -1,0 +1,72 @@
+<section class="userspace container">
+    
+    <h1>Mon espace perso</h1>
+    
+    <!--*************************************************************************-->
+    <!-- USER ORDERS -->
+    <article>
+        <h2>Mes réservations</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Titre</th>
+                    <th>Date</th>       
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach($userOrders as $userOrder) : ?>
+                <tr>
+                    <td><?= $userOrder['title_book'] ?></td>
+                    <td><?= date("m-d-Y", strtotime($userOrder['date_order']))?></td>
+                </tr>
+                <?php endforeach ;?>
+            </tbody>
+        </table>
+    </article>
+    
+    
+    <!--*************************************************************************-->
+    <!-- USER POSTS-->
+    <article>
+        <h2>Un mot à nous faire passer ?</h2>
+        <form id="sendPost" class="form" method="post">
+            
+            <div id="return"></div>
+                
+                <input type="hidden" name="id_user" value="<?= $idUser ?>"/>
+                <div>
+                    <label for="content_post">Votre message :</label>
+                    <textarea id="content_post" name="content_post" rows="5" cols="33"></textarea>
+                </div>
+                
+                <button type="submit">Envoyer</button>
+                
+            </form>
+    </article>
+    
+    
+    
+    <!--*************************************************************************-->
+    <!-- USER PREFERENCES -->
+    <article>
+        <h2>Mes préférences</h2>
+        <button id="showModal"><i class="fas fa-cog"></i></button>
+        <div class="modal">
+            <div class="modalContent">
+                <h3>Choisissez le style à appliquer :</h3>
+                <div class="flex">
+                    <p class="styleChoice">Moderne</p>
+                    <p class="styleChoice">Rétro</p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+</section>
+
+
+
+
+
+
+

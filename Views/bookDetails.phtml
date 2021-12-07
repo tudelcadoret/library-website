@@ -1,0 +1,91 @@
+<section class="bookDetails container">
+    
+    <h1>Informations sur le livre</h1>
+
+    
+    <!-- SESSION = ADMIN ************************************************-->
+    <?php if($_SESSION['user']['role_user'] === 'admin') { ?>
+    
+        <?php foreach($bookDetails as $bookDetail) : ?>
+        
+            <div id="result"></div>
+    
+            <form class="updateBook form" method="post" data-id="<?= $bookDetail['id_book'] ?>">
+        
+                <input type="hidden" name="id_book" value="<?= $bookDetail['id_book'] ?>"/>
+            
+                <div>
+                    <label for="title_book">Titre :</label>
+                    <input type="text" id="title_book" name="title_book" value="<?= $bookDetail['title_book'] ?>"/>
+                </div>
+                <div>
+                    <label for="author_book">Auteur :</label>
+                    <input type="text" id="author_book" name="author_book" value="<?= $bookDetail['author_book'] ?>"/>
+                </div>
+                <div>
+                    <label for="description_book">Description :</label>
+                    <input type="text" id="description_book" name="description_book" value="<?= $bookDetail['description_book'] ?>"/>
+                </div>
+                <div>                
+                    <label for="inStock_book">Quantité :</label>
+                    <input type="number" id="inStock_book" name="inStock_book" value="<?= $bookDetail['inStock_book'] ?>" min="1"/>
+                </div>
+                <div>
+                    <label for="image_book">Image :</label>
+                    <input type="file" id="image_book" name="image_book"/>
+                    <img src="img/<?= $bookDetail['image_book'] ?>" alt="Image du livre">
+                </div>
+                <div>
+                    <span>Coup de coeur ?</span>
+                    <div>
+                        <label for="yes">Oui</label>
+                        <input type="radio" id="yes" name="isFav_book" value="yes">
+                        <label for="no">Non</label>
+                        <input type="radio" id="no" name="isFav_book" value="no" checked>
+                    </div>
+                </div>
+                <div>
+                    <a href="admin.php" class="deleteBook" data-id="<?= $bookDetail['id_book'] ?>">
+                        <i class="far fa-trash-alt"></i>
+                        Supprimer
+                    </a>
+                </div>
+                
+                <button type="submit">Envoyer</button>
+            </form>
+        <?php endforeach ;?>    
+    
+    <?php } ?>
+    
+    
+    <!-- SESSION = USER ************************************************-->
+    <?php if($_SESSION['user']['role_user'] === 'user') { ?>
+    
+        <div id="return"></div>
+    
+        <?php foreach($bookDetails as $bookDetail) : ?>
+            
+            <p>Un livre écrit par <?= $bookDetail['author_book'] ?></p>
+            <p>Description : <?= $bookDetail['description_book'] ?></p>
+            
+            <div>
+                <img src="img/<?= $bookDetail['image_book'] ?>" alt="Image du livre">
+            </div>
+            
+            <form id="reserveBook" class="form" method="post">
+                <input type="hidden" name="id_book" value="<?= $bookDetail['id_book'] ?>"/>
+                <input type="hidden" name="id_user" value="<?= $idUser ?>"/>
+                <button type="submit">Réserver</button>
+            </form>
+            
+        <?php endforeach ;?>
+    
+    <?php } ?>
+    
+    
+    
+    <button id="historyBack" class="historyBack"><i class="fas fa-undo-alt"></i></button>
+    
+</section>
+
+
